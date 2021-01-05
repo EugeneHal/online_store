@@ -9,7 +9,7 @@ class Order(models.Model):
         verbose_name = "Order"
         verbose_name_plural = "Orders"
 
-    client = models.ForeignKey(Client, blank=False, null=True, verbose_name="Good", on_delete=models.CASCADE)
+    client = models.ForeignKey(Client, blank=False, null=True, verbose_name="Client", on_delete=models.CASCADE)
     date = models.DateTimeField(blank=False, null=False, verbose_name="Order Date / Time")
     payment_method = models.CharField(blank=False, null=False, max_length=20, verbose_name="Payment method")
     delivery_method = models.CharField(blank=False, null=False, max_length=20, verbose_name="Payment method")

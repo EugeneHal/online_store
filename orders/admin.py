@@ -5,6 +5,7 @@ from .models import *
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = [
+        'client',
         'date',
         'payment_method',
         'delivery_method',
@@ -16,6 +17,7 @@ class OrderAdmin(admin.ModelAdmin):
 @admin.register(Cart)
 class CartAdmin(admin.ModelAdmin):
     list_display = [
+        'order',
         'date',
         'item_price',
         'product_quantity',

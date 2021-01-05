@@ -1,3 +1,24 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = [
+        'date',
+        'payment_method',
+        'delivery_method',
+        'delivery_date',
+        'total_price'
+    ]
+
+
+@admin.register(Cart)
+class CartAdmin(admin.ModelAdmin):
+    list_display = [
+        'date',
+        'item_price',
+        'product_quantity',
+        'sub_total',
+        'product'
+    ]

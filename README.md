@@ -15,5 +15,4 @@ Started core project
 - Order
 - Cart
 
-
-Test for Max
+# Added apps to admin
